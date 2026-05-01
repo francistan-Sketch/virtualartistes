@@ -102,8 +102,8 @@ export default function StarField({ count = 120 }: { count?: number }) {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ zIndex: 0 }}
+      className="pointer-events-none"
+      style={{ position: "fixed", inset: 0, zIndex: 0, width: "100vw", height: "100vh" }}
     />
   );
 }

@@ -119,7 +119,6 @@ function Hero() {
   useEffect(() => { setTimeout(() => setLoaded(true), 100); }, []);
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      <StarField count={200} />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -776,7 +775,6 @@ function ChapterSongs() {
 function ChapterLegacy() {
   return (
     <section className="relative min-h-[80vh] flex items-center py-32 px-6 overflow-hidden">
-      <StarField count={80} />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -846,21 +844,25 @@ function Footer() {
 export default function RoxiePage() {
   return (
     <main className="relative" style={{ background: "#07071a" }}>
-      <Nav />
-      <Hero />
-      <Divider />
-      <ChapterDaughter />
-      <Divider />
-      <ChapterStudent />
-      <Divider />
-      <ChapterMission />
-      <Divider />
-      <ChapterSingapore />
-      <Divider />
-      <ChapterSongs />
-      <Divider />
-      <ChapterLegacy />
-      <Footer />
+      {/* Fixed bokeh canvas spans entire page */}
+      <StarField count={150} />
+      <div className="relative z-10">
+        <Nav />
+        <Hero />
+        <Divider />
+        <ChapterDaughter />
+        <Divider />
+        <ChapterStudent />
+        <Divider />
+        <ChapterMission />
+        <Divider />
+        <ChapterSingapore />
+        <Divider />
+        <ChapterSongs />
+        <Divider />
+        <ChapterLegacy />
+        <Footer />
+      </div>
     </main>
   );
 }

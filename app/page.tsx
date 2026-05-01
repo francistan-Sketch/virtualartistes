@@ -66,7 +66,6 @@ function Nav() {
 function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      <StarField count={150} />
 
       {/* Colourful layered gradient overlay */}
       <div
@@ -327,12 +326,16 @@ function Footer() {
 export default function Home() {
   return (
     <main className="relative" style={{ background: "#07071a" }}>
-      <Nav />
-      <HeroSection />
-      <VisionSection />
-      <RosterSection />
-      <StudioSection />
-      <Footer />
+      {/* Fixed bokeh canvas spans entire page scroll */}
+      <StarField count={150} />
+      <div className="relative z-10">
+        <Nav />
+        <HeroSection />
+        <VisionSection />
+        <RosterSection />
+        <StudioSection />
+        <Footer />
+      </div>
     </main>
   );
 }
