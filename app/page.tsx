@@ -73,9 +73,9 @@ function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: [
-            "radial-gradient(ellipse 55% 45% at 20% 30%, rgba(0,180,255,0.13) 0%, transparent 65%)",
-            "radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255,0,160,0.12) 0%, transparent 65%)",
-            "radial-gradient(ellipse 60% 50% at 50% 55%, rgba(100,60,220,0.1) 0%, transparent 70%)",
+            "radial-gradient(ellipse 55% 45% at 20% 30%, rgba(0,200,255,0.22) 0%, transparent 65%)",
+            "radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255,0,180,0.20) 0%, transparent 65%)",
+            "radial-gradient(ellipse 60% 50% at 50% 55%, rgba(140,60,255,0.15) 0%, transparent 70%)",
           ].join(","),
         }}
       />
@@ -326,7 +326,7 @@ function Footer() {
 
 export default function Home() {
   return (
-    <main className="relative bg-black">
+    <main className="relative" style={{ background: "#07071a" }}>
       <Nav />
       <HeroSection />
       <VisionSection />

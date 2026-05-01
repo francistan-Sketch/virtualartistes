@@ -845,7 +845,7 @@ function Footer() {
 
 export default function RoxiePage() {
   return (
-    <main className="relative bg-black">
+    <main className="relative" style={{ background: "#07071a" }}>
       <Nav />
       <Hero />
       <Divider />

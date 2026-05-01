@@ -3,12 +3,13 @@
 import { useEffect, useRef } from "react";
 
 const BOKEH_COLORS = [
-  "64,160,255",   // blue
-  "0,212,255",    // cyan
-  "255,0,170",    // magenta
-  "255,100,180",  // pink
-  "140,80,255",   // violet
-  "0,230,180",    // mint-cyan
+  "0,200,255",    // bright cyan
+  "80,160,255",   // bright blue
+  "255,50,200",   // hot magenta
+  "255,120,200",  // bright pink
+  "180,80,255",   // vivid violet
+  "0,255,200",    // mint green
+  "255,200,0",    // warm gold
 ];
 
 export default function StarField({ count = 120 }: { count?: number }) {
@@ -28,23 +29,23 @@ export default function StarField({ count = 120 }: { count?: number }) {
     window.addEventListener("resize", resize);
 
     // Bokeh orbs — large soft glowing circles
-    const bokeh = Array.from({ length: 18 }, () => ({
+    const bokeh = Array.from({ length: 24 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: 90 + Math.random() * 180,
+      r: 100 + Math.random() * 220,
       color: BOKEH_COLORS[Math.floor(Math.random() * BOKEH_COLORS.length)],
-      baseAlpha: 0.10 + Math.random() * 0.14,
+      baseAlpha: 0.18 + Math.random() * 0.22,
       speed: 0.0004 + Math.random() * 0.0006,
       phase: Math.random() * Math.PI * 2,
-      vx: (Math.random() - 0.5) * 0.18,
-      vy: (Math.random() - 0.5) * 0.18,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
     }));
 
     // Stars — small white twinklers
     const stars = Array.from({ length: count }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.2 + 0.2,
+      r: Math.random() * 1.6 + 0.3,
       speed: Math.random() * 0.004 + 0.001,
       phase: Math.random() * Math.PI * 2,
     }));
