@@ -68,6 +68,13 @@ html {
   background-clip: text;
 }
 
+.gradient-hero {
+  background: linear-gradient(120deg, #40c4ff 0%, #d946ef 45%, #f472b6 80%, #40c4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .gradient-silver {
   background: linear-gradient(135deg, #e8e8e8 0%, #a0a0a0 50%, #e8e8e8 100%);
   -webkit-background-clip: text;

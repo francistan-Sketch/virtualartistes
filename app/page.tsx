@@ -68,11 +68,15 @@ function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       <StarField count={150} />
 
+      {/* Colourful layered gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(80,60,180,0.18) 0%, transparent 70%)",
+          background: [
+            "radial-gradient(ellipse 55% 45% at 20% 30%, rgba(0,180,255,0.13) 0%, transparent 65%)",
+            "radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255,0,160,0.12) 0%, transparent 65%)",
+            "radial-gradient(ellipse 60% 50% at 50% 55%, rgba(100,60,220,0.1) 0%, transparent 70%)",
+          ].join(","),
         }}
       />
 
@@ -87,7 +91,17 @@ function HeroSection() {
         >
           Born from
           <br />
-          <span className="gradient-gold font-light">Imagination.</span>
+          <span
+            className="font-light"
+            style={{
+              background: "linear-gradient(120deg, #40c4ff 0%, #d946ef 50%, #f472b6 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Imagination.
+          </span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/40 font-light tracking-wide mb-4">
@@ -124,8 +138,10 @@ function VisionSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(20,20,40,0.6) 0%, transparent 80%)",
+          background: [
+            "radial-gradient(ellipse 70% 55% at 25% 50%, rgba(0,200,255,0.07) 0%, transparent 65%)",
+            "radial-gradient(ellipse 70% 55% at 75% 50%, rgba(200,0,180,0.07) 0%, transparent 65%)",
+          ].join(","),
         }}
       />
       <div className="relative z-10 max-w-3xl mx-auto text-center">

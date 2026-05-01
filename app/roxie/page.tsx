@@ -123,8 +123,11 @@ function Hero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 55% at 50% 55%, rgba(40,50,120,0.35) 0%, rgba(80,40,10,0.12) 60%, transparent 100%)",
+          background: [
+            "radial-gradient(ellipse 60% 50% at 15% 40%, rgba(0,180,255,0.14) 0%, transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 85% 60%, rgba(220,0,180,0.13) 0%, transparent 60%)",
+            "radial-gradient(ellipse 70% 60% at 50% 55%, rgba(80,40,200,0.1) 0%, transparent 70%)",
+          ].join(","),
         }}
       />
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
